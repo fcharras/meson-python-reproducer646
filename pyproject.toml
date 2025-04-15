@@ -1,0 +1,30 @@
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python']
+
+[project]
+name = 'reproducer646'
+version = '0.0.1'
+
+[project.optional-dependencies]
+dev = [
+    "ipdb",
+    "ipython",
+    "pip-tools",
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+# We follow the pytest recommendations by setting the `import-mode` and using
+# the `src/tests` layout.
+# https://docs.pytest.org/en/stable/explanation/goodpractices.html#tests-outside-application-code
+testpaths = [
+    "src/",
+    "tests/"
+]
+addopts = [
+    "--durations=3",
+    # "--import-mode=importlib",
+    "--no-header",
+    "--verbosity=2",
+]

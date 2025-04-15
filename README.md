@@ -45,5 +45,3 @@ E         + bar
 
 tests/test_some_module.py:5: AssertionError
 ```
-
-This project provides two times the same test located on different location (either ./tests or ./src/reproducer646/test/ folders) to test pytest behavior in different setups.

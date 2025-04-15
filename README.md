@@ -13,7 +13,7 @@ Or you can try to reproduce locally, provided a working python environment, clon
 ```bash
 python -m venv reproducer646_venv
 source reproducer646_venv/bin/activate
-pip install -e .[dev] -c contraints-dev.txt
+pip install -e .[dev] -c constraints-dev.txt
 python -m pytest
 ```
 
